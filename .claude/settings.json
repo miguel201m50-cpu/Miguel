@@ -1,5 +1,16 @@
 {
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "export PATH=\"$HOME/.local/bin:$PATH\"; command -v graphify >/dev/null && graphify hook install >/dev/null 2>&1 || true",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash|Grep",
